@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* nötr arka plan */
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100%;
+}
+.sidebar {
+  background-color: #ffffff;
+  width: 240px;           /* genişlik artırıldı */
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;              /* butonlar arası boşluk artırıldı */
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Görseli küçültme kuralın */
+.logo img {
+  max-width: 25%;
+  height: auto;
+  display: block; /* flex konteynerde uyum için */
+}
+
+/* Menü butonları */
+.menu-item {
+  width: 100%;
+  padding: 16px;          /* buton yüksekliği artırıldı */
+  font-size: 18px;        /* yazı büyüklüğü artırıldı */
+  background-color: #f7941d; /* turuncu ana renk */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+.menu-item:hover {
+  background-color: #e57c00; /* hover için koyu turuncu */
+}
+.menu-item:active {
+  transform: scale(0.97);
+}
+.menu-item.active {
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* İçerik alanı */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  /* Alt menü ve ürünleri dikeyde hizala */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Alt Menü (Sıcak/Soğuk) */
+.sub-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;         /* buton arası boşluk */
+  margin-bottom: 25px;
+}
+.sub-menu-item {
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: #cccccc; /* gri ton */
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.sub-menu-item:hover {
+  background-color: #bbbbbb;
+}
+.sub-menu-item.active {
+  background-color: #f7941d; /* turuncu */
+  color: #ffffff;
+}
+
+/* Ürün Kartları */
+.products-wrapper {
+  /* Alt menüden hemen sonra ürünleri saran kapsayıcı */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+.product {
+  width: 260px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.info {
+  padding: 12px;
+}
+.info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #333333;
+}
+.info span {
+  font-weight: bold;
+  color: #5f9c00; /* yeşil vurgu rengi */
+}
+
+/* Animasyon */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    flex-direction: column !important;
+    width: 100%;
+    overflow: visible;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between; /* üç butonu eşit dağıt */
+    gap: 5px;                        /* küçük boşluk */
+    width: 100%;
+    overflow: hidden;                /* kaydırма kaldırıldı */
+  }
+
+  .menu-item {
+    flex: 1;         /* üçü de eşit genişlikte */
+    min-width: 0;    /* sığmaları için */
+    padding: 10px 5px;
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+  .sub-menu {
+    margin-bottom: 15px;
+    gap: 10px;
+    flex-wrap: wrap; /* daralan alt menü butonları da satır kaymasın diye */
+    justify-content: center;
+  }
+  .products-wrapper {
+    gap: 15px;
+  }
+}
+/* ---------- Modal Popup ---------- */
+.modal {
+  display: none;               /* gizli başlar */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 320px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px; right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.modal-info h3 {
+  margin: 8px 0 4px;
+  font-size: 20px;
+  color: #333;
+}
+
+.modal-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.modal-info span {
+  display: inline-block;
+  font-weight: bold;
+  color: #5f9c00;
+  font-size: 16px;
+}
+/* Bilgi metni stili */
+.info-text {
+  width: 100%;
+  text-align: center;       /* istersen center da yapabilirsin */
+  font-size: 14px;        /* küçük puntodan hoşlandıysan */
+  color: #888888;         /* soluk gri */
+  margin: 0 0 15px;         /* üst‑alt boşluk */
+  padding-left: 4px;      /* hafif soldan iç boşluk */
+}
+/* Ürün listesinin altındaki placeholder arka plan div’i */
+.custom-bg-placeholder {
+  width: 100%;
+  height: 200px;                 /* İstediğiniz yüksekliği verin */
+  background-image: url('images/placeholder.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;      /* veya cover, ihtiyaca göre */
+  margin-top: 20px;              /* Üstündeki içeriğe boşluk bırakır */
+}

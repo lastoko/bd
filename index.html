@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Menü</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.png" alt="Bodrum Dondurmacısı Logo" />
+      </div>
+
+      <div class="menu-container">
+        <button class="menu-item" data-menu="dondurma">BD Specials</button>
+        <button class="menu-item" data-menu="waffle">Waffle Menü</button>
+        <button class="menu-item" data-menu="icecek">İçecek Menü</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <!-- Sabit bilgi metni -->
+      <div class="info-text">*Detaylar için ürünlere tıklayınız.</div>
+
+      <!-- JS ile doldurulacak ürün kapsayıcısı -->
+      <div id="productContainer"></div>
+		<div class="custom-bg-placeholder"></div>
+    </main>
+  </div>
+
+  <!-- Ürün Detay Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalName"></h3>
+        <p id="modalDesc"></p>
+        <span id="modalPrice"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
