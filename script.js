@@ -7,29 +7,30 @@ var menus = {
       { name: "Maden Suyu",            desc: "", price: "₺20",  img: "images/maden_suyu.jpg" },
       { name: "Meyveli Soda",          desc: "", price: "₺25",  img: "images/meyveli_soda.jpg" },
       { name: "Portakal Suyu (Taze)",  desc: "", price: "₺100", img: "images/portakal_suyu.jpg" },
-      { name: "Meyve Suyu 1L (Donuk)", desc: "", price: "₺180", img: "images/meyve_suyu.jpg" },
-      { name: "Ice Coffee",            desc: "", price: "₺120", img: "images/ice_coffee.jpg" }
+      { name: "Ice Coffee", desc: "", price: "₺180", img: "images/ice_coffee.jpg" },
+      { name: "Meyve Suyu 1L (Donuk)",            desc: "", price: "₺120", img: "images/meyve_suyu.jpg" }
     ],
     sicak: [
       { name: "Çay",           desc: "", price: "₺25",  img: "images/cay.jpg" },
-      { name: "Espresso",      desc: "", price: "₺65",  img: "images/espresso.jpg" },
-      { name: "Türk Kahvesi",  desc: "", price: "₺65",  img: "images/turk_kahvesi.jpg" },
+      { name: "Türk Kahvesi",      desc: "", price: "₺65",  img: "images/turk_kahvesi.jpg" },
+      { name: "Espresso",  desc: "", price: "₺65",  img: "images/espresso.jpg" },
       { name: "Double Espresso", desc: "", price: "₺100", img: "images/double_espresso.jpg" },
       { name: "Latte",         desc: "", price: "₺100", img: "images/latte.jpg" },
       { name: "Americano",     desc: "", price: "₺100", img: "images/americano.jpg" },
-      { name: "Affogato",      desc: "", price: "₺140", img: "images/affogato.jpg" }
+      
     ]
   },
   waffle: [
-    { name: "Waffle Basic (Meyveli)",    desc: "", price: "₺250", img: "images/waffle_basic.jpg" },
-    { name: "Waffle Extra (Dondurmalı)", desc: "", price: "₺350", img: "images/waffle_extra.jpg" },
-    { name: "Waffle‑Wich",               desc: "", price: "₺400", img: "images/waffle_wich.jpg" }
+    { name: "Waffle Basic (Meyveli)",    desc: "Enfes Waffle üzerine seçeceğiniz mevsim meyveleri,ekstralar ile servis edilir.", price: "₺250", img: "images/waffle_basic.jpg" },
+    { name: "Waffle Extra (Dondurmalı)", desc: "Enfes Waffle üzerine seçeceğiniz mevsim meyveleri,ekstralar ve 2 çeşit dondurma ile servis edilir.", price: "₺350", img: "images/waffle_extra.jpg" },
+    { name: "Waffle‑Wich",               desc: "Enfes Double Waffle arasına seçeceğiniz mevsim meyveleri ve ekstralar ile servis edilir.", price: "₺400", img: "images/waffle_wich.jpg" }
   ],
   dondurma: [
-    { name: "Dondurma (kg)",             desc: "", price: "₺1200", img: "images/dondurma_kg.jpg" },
+    { name: "Dondurma (1kg)",             desc: "1kg alımlarda 6 adete kadar kornet ücretsizdir.", price: "₺1200", img: "images/dondurma_kg.jpg" },
     { name: "Milkshake",                 desc: "", price: "₺200",  img: "images/milkshake.jpg" },
     { name: "Kağıt Helva",               desc: "", price: "₺30",   img: "images/kagit_helva.jpg" },
-    { name: "Mandalinalı Mozaik Pasta",  desc: "", price: "₺140",  img: "images/mozaik_pasta.jpg" }
+    { name: "Mandalinalı Mozaik Pasta",  desc: "", price: "₺140",  img: "images/mozaik_pasta.jpg" },
+	{ name: "Affogato",      desc: "Espresso üzerine vanilyalı dondurma ile servis edilir.", price: "₺140", img: "images/affogato.jpg" },
   ]
 };
 

@@ -1,7 +1,3 @@
-/* -------------------------------------------------
-   Bodrum Dondurmacısı QR Menü – Düzenlenmiş CSS
-   -------------------------------------------------*/
-
 /* 1) Özel font tanımı */
 @font-face {
   font-family: 'PTSans';
@@ -164,36 +160,44 @@ body {
   justify-content: center;
 }
 .product {
-  width: 260px;
-  background-color: #dddddd;    /* Orta gri ton */
+  position: relative;       /* (yeniden eklendi) */
+  width: 220px;             /* sizin küçük boyut isteğinize göre */
+  background-color: #dddddd;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden;         /* info paneli taştığında kesmek için */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s forwards;
 }
 .product img {
+  display: block;
   width: 100%;
-  height: 120px;
+  height: 180px;            /* veya sizin seçtiğiniz yükseklik */
   object-fit: cover;
   object-position: center;
-  display: block;
 }
-.info {
-  padding: 12px;
-}
-.info h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-  color: #333;
-}
-.info span {
-  font-family: Arial, sans-serif; /* ₺ simgesi sorunu için */
-  font-weight: bold;
-  color: #5f9c00;
+ .info {
+  position: absolute;       /* info’yu “üstte” göstermek için */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.8); /* yarı saydam zemin */
+  padding: 10px 12px;
 }
 
+ .info h3 {
+  margin: 0 0 4px;          /* artık üst boşluğa gerek yok */
+  font-size: 16px;          /* dilersen burayı da biraz küçült */
+  color: #333;
+}
+
+ .info span {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #5f9c00;
+  font-size: 14px;          /* dilersen burayı da ayarla */
+}
 /* 12) Placeholder Arka Plan Div’i */
 .custom-bg-placeholder {
   width: 100%;
