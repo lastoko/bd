@@ -29,7 +29,7 @@ var menus = {
     { name: "Dondurma (kg)",             desc: "", price: "₺1200", img: "images/dondurma_kg.jpg" },
     { name: "Milkshake",                 desc: "", price: "₺200",  img: "images/milkshake.jpg" },
     { name: "Kağıt Helva",               desc: "", price: "₺30",   img: "images/kagit_helva.jpg" },
-    { name: "Bodrum Mandalinalı Pasta",  desc: "", price: "₺140",  img: "images/mozaik_pasta.jpg" }
+    { name: "Mandalinalı Mozaik Pasta",  desc: "", price: "₺140",  img: "images/mozaik_pasta.jpg" }
   ]
 };
 
