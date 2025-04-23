@@ -4,18 +4,18 @@ var menus = {
     soguk: [
       { name: "Soğuk Meşrubatlar",    desc: "", price: "₺50",  img: "images/soguk_mesrubatlar.jpg" },
       { name: "Su",                    desc: "", price: "₺20",  img: "images/su.jpg" },
-      { name: "Maden Suyu",            desc: "", price: "₺20",  img: "images/maden_suyu.jpg" },
-      { name: "Meyveli Soda",          desc: "", price: "₺25",  img: "images/meyveli_soda.jpg" },
-      { name: "Portakal Suyu (Taze)",  desc: "", price: "₺100", img: "images/portakal_suyu.jpg" },
-      { name: "Ice Coffee", desc: "", price: "₺180", img: "images/ice_coffee.jpg" },
-      { name: "Meyve Suyu 1L (Donuk)",            desc: "", price: "₺120", img: "images/meyve_suyu.jpg" }
+      { name: "Maden Suyu",            desc: "", price: "₺25",  img: "images/maden_suyu.jpg" },
+      { name: "Meyveli Soda",          desc: "", price: "₺30",  img: "images/meyveli_soda.jpg" },
+      { name: "Portakal Suyu (Taze)",  desc: "", price: "₺125", img: "images/portakal_suyu.jpg" },
+      { name: "Ice Coffee", desc: "", price: "₺120", img: "images/ice_coffee.jpg" },
+      { name: "Meyve Suyu 1L (Donuk)",            desc: "", price: "₺180", img: "images/meyve_suyu.jpg" }
     ],
     sicak: [
-      { name: "Çay",           desc: "", price: "₺25",  img: "images/cay.jpg" },
-      { name: "Türk Kahvesi",      desc: "", price: "₺65",  img: "images/turk_kahvesi.jpg" },
-      { name: "Espresso",  desc: "", price: "₺65",  img: "images/espresso.jpg" },
-      { name: "Double Espresso", desc: "", price: "₺100", img: "images/double_espresso.jpg" },
-      { name: "Latte",         desc: "", price: "₺100", img: "images/latte.jpg" },
+      { name: "Çay",           desc: "", price: "₺30",  img: "images/cay.jpg" },
+      { name: "Türk Kahvesi",      desc: "", price: "₺75",  img: "images/turk_kahvesi.jpg" },
+      { name: "Espresso",  desc: "", price: "₺90",  img: "images/espresso.jpg" },
+      { name: "Double Espresso", desc: "", price: "₺125", img: "images/double_espresso.jpg" },
+      { name: "Latte",         desc: "", price: "₺120", img: "images/latte.jpg" },
       { name: "Americano",     desc: "", price: "₺100", img: "images/americano.jpg" },
       
     ]
@@ -30,7 +30,7 @@ var menus = {
     { name: "Milkshake",                 desc: "", price: "₺200",  img: "images/milkshake.jpg" },
     { name: "Kağıt Helva",               desc: "", price: "₺30",   img: "images/kagit_helva.jpg" },
     { name: "Mandalinalı Mozaik Pasta",  desc: "", price: "₺140",  img: "images/mozaik_pasta.jpg" },
-	{ name: "Affogato",      desc: "Espresso üzerine vanilyalı dondurma ile servis edilir.", price: "₺140", img: "images/affogato.jpg" },
+	{ name: "Affogato",      desc: "Espresso üzerine vanilyalı dondurma ile servis edilir.", price: "₺150", img: "images/affogato.jpg" },
   ]
 };
 
